@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.Kalkulator;
+@{
+    ViewData["Titile"] = "Kalkulator";
+}
+
+< style > td, th
+{
+    padding: 10 px;
+}
+< /style>
+<div align="center">
+    <h2>Kalkulator</h2> @using (Html.BeginForm())
+            {
+        
+            <tr>
+                <th> a </th>
+                <td> <input type="number" id="txta" name="a" class="form-control" step="0.01" /> </td>
+            </tr>
+            <tr>
+                <th> b </th>
+                <td> <input type="number" id="txtb" name="b" class="form-control" step="0.01" /> </td>
+            </tr>
+            <tr>
+                <th><input type="submit" name="operation" value="+" class="btn btn-primary" />  <input type="submit" name="operation" value="-" class="btn btn-primary" /> <input type="submit" name="operation" value="*" class="btn btn-primary" />   <input type="submit" name="operation" value="/" class="btn btn-primary" /> </th>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td><input type="number" class="form-control" value="@ViewBag.Result" /> </td>
+            </tr>
+        <tr>
+            <th>Error_message</th>
+            <td><input type="text" class="form-control" value="@ViewBag.Error_message" /> </td>
+        </tr>
+       
+            }
+</div> 

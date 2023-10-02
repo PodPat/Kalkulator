@@ -1,0 +1,13 @@
+﻿@model WebApplication1.Models.Urodziny;
+@{
+    ViewData["Titile"] = "Formularz urodziny";
+}
+
+<p> formularz</p>
+<form action ="Urodziny">
+    <input type = "text" asp-for="Imie"/>Imie
+    <input type ="number" asp-for="Rok" />  Rok Urodzenia
+    <input type ="Submit" />
+</form> 
+
+@ViewBag.powitanie;
